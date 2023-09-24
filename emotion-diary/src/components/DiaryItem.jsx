@@ -10,7 +10,7 @@ export default function DiaryItem({ id, emotion, content, date }) {
     navigate(`/diary/${id}`);
   };
   const goEdit = () => {
-    navigate(`/eidt/${id}`);
+    navigate(`/edit/${id}`);
   };
   return (
     <div className="DiaryItem">

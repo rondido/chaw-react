@@ -4,10 +4,7 @@ import MyButton from "./MyButton";
 import { useRef, useState, useContext, useEffect } from "react";
 import EmotionItem from "./EmotionItem";
 import { DiaryDispatchContext } from "../App";
-
-const getStringDate = (date) => {
-  return date.toISOString().slice(0, 10);
-};
+import { getStringDate } from "../util/date";
 
 const emotionList = [
   {

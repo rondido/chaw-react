@@ -32,7 +32,7 @@ const ControlMenu = ({ value, onChange, optionList }) => {
 
 export default function DiaryList({ diaryList }) {
   const navigate = useNavigate();
-  const [sortType, setSortType] = useState("lastest");
+  const [sortType, setSortType] = useState("latest");
   const [filter, setFiler] = useState("all");
   //정렬된 List 목록
   const getProcessedDiaryList = () => {

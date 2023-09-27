@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import MyButton from "./MyButton";
 import DiaryItem from "./DiaryItem";
@@ -14,7 +14,7 @@ const filterOptionList = [
   { value: "bad", name: "안좋은 감정" },
 ];
 
-const ControlMenu = ({ value, onChange, optionList }) => {
+const ControlMenu = memo(({ value, onChange, optionList }) => {
   return (
     <select
       className="ControlMenu"
@@ -28,7 +28,7 @@ const ControlMenu = ({ value, onChange, optionList }) => {
       ))}
     </select>
   );
-};
+});
 
 export default function DiaryList({ diaryList }) {
   const navigate = useNavigate();

@@ -1,8 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import MyButton from "./MyButton";
 import { useNavigate } from "react-router-dom";
 
-export default function DiaryItem({ id, emotion, content, date }) {
+function DiaryItem({ id, emotion, content, date }) {
   const navigate = useNavigate();
   const strDate = new Date(parseInt(date)).toLocaleDateString();
 
@@ -33,3 +33,5 @@ export default function DiaryItem({ id, emotion, content, date }) {
     </div>
   );
 }
+
+export default memo(DiaryItem);
